@@ -1,4 +1,4 @@
-package ru.netology.geo;
+package ru.netology.geoLocal;
 
 import ru.netology.entity.Location;
 
