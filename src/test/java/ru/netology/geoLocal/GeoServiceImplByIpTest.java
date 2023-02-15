@@ -10,8 +10,6 @@ import ru.netology.entity.Location;
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.netology.geoLocal.GeoServiceImpl.*;
 
-
-import java.util.Objects;
 import java.util.stream.Stream;
 
 public class GeoServiceImplByIpTest {
