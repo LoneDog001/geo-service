@@ -43,7 +43,11 @@ public class GeoServiceImplByIpTest {
     public void byIpTest(String ip, Location expected) {
         System.out.println("Test byIp with parameters");
         Location result = sut.byIp(ip);
-        Assertions.assertEquals(expected, result);
+        Assertions.assertEquals(expected.getCity(), result.getCity());
+        Assertions.assertEquals(expected.getCountry(), result.getCountry());
+        Assertions.assertEquals(expected.getStreet(), result.getStreet());
+        Assertions.assertEquals(expected.getBuiling(), result.getBuiling());
+
     }
 
     public static Stream<Arguments> byIp() {
@@ -51,7 +55,7 @@ public class GeoServiceImplByIpTest {
                 Arguments.of(MOSCOW_IP, new Location("Moscow", Country.RUSSIA, "Lenina", 15)),
                 Arguments.of(NEW_YORK_IP, new Location("New York", Country.USA, " 10th Avenue", 32)),
                 Arguments.of("172.", new Location("Moscow", Country.RUSSIA, null, 0)),
-                Arguments.of("96.", "New York", Country.USA, null, 0));
+                Arguments.of("96.", new Location("New York", Country.USA, null, 0)));
     }
 
     @Test

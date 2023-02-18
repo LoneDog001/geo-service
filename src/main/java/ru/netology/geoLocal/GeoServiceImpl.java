@@ -34,4 +34,9 @@ public class GeoServiceImpl implements GeoService {
 
         throw new RuntimeException("Not implemented");
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
