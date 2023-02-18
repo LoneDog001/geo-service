@@ -31,12 +31,6 @@ public class GeoServiceImpl implements GeoService {
      * Метод определяет локацию по координатам
      */
     public Location byCoordinates(double latitude, double longitude) {
-
         throw new RuntimeException("Not implemented");
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
     }
 }
